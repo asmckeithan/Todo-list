@@ -3,7 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import TodoForm from './components/Taskform'
-import Todolist from './components/TodoList'
+import TodoList from './components/TodoList'
+import Popup from './components/Popup'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,9 +13,10 @@ function App() {
     
       <div>
         <h1>Event Handler </h1>
-          <TodoForm newTask={newTask}/>
+          <TodoForm/>
           <TodoList/>
-
+          <button >Show added Tasks</button>
+          <Popup/>
       </div>
  
     );

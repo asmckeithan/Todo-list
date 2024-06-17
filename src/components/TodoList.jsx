@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-
-const TodoList = ({task}) => {
+//Creating a bullet point list for all new task
+const TodoList = () => {
+    const [tasks, setTasks] = useState([])
     return(
         <div>
             <ul>
-                {task.map((task, index) => (
-                    <li key={index}>{task}</li>
+                {tasks.map((tasks, index) => (
+                    <li key={index}>{tasks}</li>
                 )
                 )}
             </ul>
@@ -14,4 +15,4 @@ const TodoList = ({task}) => {
     )
 }
 
-export default Todolist
+export default TodoList
